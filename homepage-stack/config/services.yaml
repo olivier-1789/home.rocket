@@ -1,0 +1,25 @@
+- Infrastructure:
+    - Portainer:
+        icon: portainer.png
+        href: https://portainer.rocket
+        description: Gestion des conteneurs
+        ping: 192.168.1.23:9443
+        
+    - AdGuard Home:
+        icon: adguard-home.png
+        href: http://adguard.rocket
+        description: DNS et Blocage de publicités
+        ping: 192.168.1.23:8080
+
+    - Nginx Proxy Manager:
+        icon: nginx-proxy-manager.png
+        href: http://192.168.1.23:81
+        description: Reverse Proxy
+        ping: 192.168.1.23:81
+
+- Documentation:
+    - Wiki.js:
+        icon: wikijs.png
+        href: http://wiki.rocket
+        description: Base de connaissances
+        ping: 192.168.1.23:3001

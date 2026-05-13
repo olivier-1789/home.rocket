@@ -1,0 +1,7 @@
+- Outils Externes:
+    - GitHub:
+        - icon: github.png
+          href: https://github.com/
+    - Tailscale (Admin):
+        - icon: tailscale.png
+          href: https://login.tailscale.com/admin/machines
