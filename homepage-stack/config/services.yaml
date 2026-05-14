@@ -1,7 +1,7 @@
 - Infrastructure:
     - Portainer:
         icon: portainer.png
-        href: https://portainer.rocket
+        href: https://192.168.1.23:9443
         description: Gestion des conteneurs
         ping: 192.168.1.23:9443
         
