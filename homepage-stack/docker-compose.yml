@@ -5,7 +5,7 @@ services:
     ports:
       - 3002:3000
     volumes:
-      - ./config:/app/config
+      - /home/rocket/projects/home.rocket/homepage-stack/config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
       - HOMEPAGE_ALLOWED_HOSTS=*
