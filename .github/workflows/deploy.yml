@@ -23,5 +23,6 @@ jobs:
           script: |
             cd ~/projects/home.rocket
             git pull
-            docker restart homepage
+            cd homepage-stack
+            docker compose up -d --force-recreate
             echo "✅ Déploiement terminé avec succès !"
