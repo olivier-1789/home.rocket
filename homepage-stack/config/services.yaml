@@ -3,23 +3,27 @@
         icon: portainer.png
         href: http://portainer.rocket
         description: Gestion des conteneurs
-        ping: host.docker.internal:9443
+        server: rocket
+        container: portainer
 
     - AdGuard Home:
         icon: adguard-home.png
         href: http://adguard.rocket
         description: DNS et Blocage de publicités
-        ping: host.docker.internal:8080
+        server: rocket
+        container: adguardhome
 
     - Nginx Proxy Manager:
         icon: nginx-proxy-manager.png
         href: http://192.168.1.23:81
         description: Reverse Proxy
-        ping: host.docker.internal:81
+        server: rocket
+        container: nginx-proxy-manager-app-1
 
 - Documentation:
     - Wiki.js:
         icon: wikijs.png
         href: http://wiki.rocket
         description: Base de connaissances
-        ping: host.docker.internal:3001
+        server: rocket
+        container: wikijs
