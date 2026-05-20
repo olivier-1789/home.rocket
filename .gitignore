@@ -1,1 +1,8 @@
 .env
+
+# Fichiers auto-générés par Homepage
+homepage-stack/config/custom.css
+homepage-stack/config/custom.js
+homepage-stack/config/kubernetes.yaml
+homepage-stack/config/proxmox.yaml
+homepage-stack/config/logs/
