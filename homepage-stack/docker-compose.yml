@@ -7,6 +7,8 @@ services:
     volumes:
       - /home/rocket/projects/home.rocket/homepage-stack/config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
+    env_file:
+      - .env
     environment:
       - HOMEPAGE_ALLOWED_HOSTS=*
     extra_hosts:

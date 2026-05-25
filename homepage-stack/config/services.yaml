@@ -27,6 +27,10 @@
         description: Automatisation maison
         server: rocket
         container: homeassistant
+        widget:
+          type: homeassistant
+          url: http://192.168.1.23:8123
+          key: "{{HOMEPAGE_VAR_HATOKEN}}"
 
     - Zigbee2MQTT:
         icon: zigbee2mqtt.png
