@@ -20,6 +20,28 @@
         server: rocket
         container: nginx-proxy-manager-app-1
 
+- Domotique:
+    - Home Assistant:
+        icon: home-assistant.png
+        href: http://homeassistant.rocket
+        description: Automatisation maison
+        server: rocket
+        container: homeassistant
+
+    - Zigbee2MQTT:
+        icon: zigbee2mqtt.png
+        href: http://rocket:8099
+        description: Passerelle Zigbee
+        server: rocket
+        container: zigbee2mqtt
+
+    - Mosquitto:
+        icon: mosquitto.png
+        href: http://rocket:1883
+        description: Broker MQTT
+        server: rocket
+        container: mosquitto
+
 - Documentation:
     - Wiki.js:
         icon: wikijs.png
