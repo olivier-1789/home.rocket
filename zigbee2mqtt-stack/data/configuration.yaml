@@ -1,0 +1,18 @@
+homeassistant:
+  discovery_topic: homeassistant
+  status_topic: homeassistant/status
+
+permit_join: false
+
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://localhost
+
+serial:
+  port: /dev/ttyUSB0
+
+frontend:
+  port: 8099
+
+advanced:
+  log_level: info

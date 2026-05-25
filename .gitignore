@@ -1,5 +1,14 @@
 .env
 
+# Données runtime (non versionnées)
+homeassistant-stack/config/
+zigbee2mqtt-stack/data/zigbee2mqtt.db
+zigbee2mqtt-stack/data/coordinator_backup.json
+zigbee2mqtt-stack/data/devices.yaml
+zigbee2mqtt-stack/data/groups.yaml
+zigbee2mqtt-stack/data/state.json
+zigbee2mqtt-stack/data/log/
+
 # Fichiers auto-générés par Homepage
 homepage-stack/config/custom.css
 homepage-stack/config/custom.js
