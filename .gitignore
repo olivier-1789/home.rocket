@@ -1,7 +1,8 @@
 .env
 
 # Données runtime (non versionnées)
-homeassistant-stack/config/
+homeassistant-stack/config/*
+!homeassistant-stack/config/configuration.yaml
 zigbee2mqtt-stack/data/zigbee2mqtt.db
 zigbee2mqtt-stack/data/coordinator_backup.json
 zigbee2mqtt-stack/data/devices.yaml
