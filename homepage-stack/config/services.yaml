@@ -30,14 +30,13 @@
 
     - Zigbee2MQTT:
         icon: zigbee2mqtt.png
-        href: http://rocket:8099
+        href: http://192.168.1.23:8099
         description: Passerelle Zigbee
         server: rocket
         container: zigbee2mqtt
 
     - Mosquitto:
         icon: mosquitto.png
-        href: http://rocket:1883
         description: Broker MQTT
         server: rocket
         container: mosquitto
