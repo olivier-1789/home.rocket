@@ -16,3 +16,7 @@ homepage-stack/config/custom.js
 homepage-stack/config/kubernetes.yaml
 homepage-stack/config/proxmox.yaml
 homepage-stack/config/logs/
+
+# Données runtime Jellyfin
+jellyfin-stack/config/
+jellyfin-stack/cache/

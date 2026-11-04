@@ -1,0 +1,13 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    network_mode: host
+    user: 1000:1000
+    volumes:
+      - /home/rocket/projects/home.rocket/jellyfin-stack/config:/config
+      - /home/rocket/projects/home.rocket/jellyfin-stack/cache:/cache
+      - /home/rocket/media:/media:ro
+    environment:
+      - JELLYFIN_PublishedServerUrl=http://192.168.1.23:8096
+    restart: unless-stopped
