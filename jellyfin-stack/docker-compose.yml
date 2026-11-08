@@ -8,6 +8,7 @@ services:
       - /home/rocket/projects/home.rocket/jellyfin-stack/config:/config
       - /home/rocket/projects/home.rocket/jellyfin-stack/cache:/cache
       - /home/rocket/media:/media:ro
+      - /home/rocket/projects/home.rocket/media-stack/data/media:/data/media:ro
     environment:
       - JELLYFIN_PublishedServerUrl=http://192.168.1.23:8096
     restart: unless-stopped
