@@ -4,26 +4,34 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Tailscale
-        uses: tailscale/github-action@v2
+        uses: tailscale/github-action@v3
         with:
-          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          tags: tag:ci
 
       - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.PI_HOST }}
           username: rocket
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          command_timeout: 8m
           script: |
+            set -e
             cd ~/projects/home.rocket
-            git pull
-            cd homepage-stack
-            docker compose pull
-            docker compose up -d
+            git pull --ff-only
+            # Stacks déployées automatiquement à chaque push sur main
+            for stack in homepage-stack jellyfin-stack media-stack; do
+              echo "🚀 Déploiement de $stack"
+              (cd "$stack" && docker compose pull -q && docker compose up -d)
+            done
             echo "✅ Déploiement terminé avec succès !"
