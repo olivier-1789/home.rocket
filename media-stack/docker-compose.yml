@@ -1,0 +1,42 @@
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+    volumes:
+      - ./config/radarr:/config
+      - ./data:/data
+    ports:
+      - 7878:7878
+    restart: unless-stopped
+
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:latest
+    container_name: prowlarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+    volumes:
+      - ./config/prowlarr:/config
+    ports:
+      - 9696:9696
+    restart: unless-stopped
+
+  rdtclient:
+    image: rogerfar/rdtclient:latest
+    container_name: rdtclient
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+    volumes:
+      # Base de données sur /data/db (chemin par défaut de RDT-Client), hors de ./data
+      - ./config/rdtclient:/data/db
+      - ./data:/data
+    ports:
+      - 6500:6500
+    restart: unless-stopped

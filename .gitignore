@@ -20,3 +20,7 @@ homepage-stack/config/logs/
 # Données runtime Jellyfin
 jellyfin-stack/config/
 jellyfin-stack/cache/
+
+# Données runtime media-stack
+media-stack/data/
+media-stack/config/
