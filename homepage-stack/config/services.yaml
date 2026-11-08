@@ -52,3 +52,39 @@
         description: Base de connaissances
         server: rocket
         container: wikijs
+
+- Médias:
+    - Jellyfin:
+        icon: jellyfin.png
+        href: http://jellyfin.rocket
+        description: Films et séries
+        server: rocket
+        container: jellyfin
+
+    - Seerr:
+        icon: jellyseerr.png
+        href: http://films.rocket
+        description: Catalogue et demandes de films
+        server: rocket
+        container: seerr
+
+    - Radarr:
+        icon: radarr.png
+        href: http://192.168.1.23:7878
+        description: Gestion des films
+        server: rocket
+        container: radarr
+
+    - Prowlarr:
+        icon: prowlarr.png
+        href: http://192.168.1.23:9696
+        description: Gestion des indexeurs
+        server: rocket
+        container: prowlarr
+
+    - RDT-Client:
+        icon: rdt-client.png
+        href: http://192.168.1.23:6500
+        description: Client Debrid-Link
+        server: rocket
+        container: rdtclient
