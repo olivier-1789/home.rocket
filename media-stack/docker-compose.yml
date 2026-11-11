@@ -22,6 +22,8 @@ services:
       - TZ=Europe/Paris
     volumes:
       - ./config/prowlarr:/config
+    dns:
+      - 192.168.1.23  # AdGuard Home sur rocket
     ports:
       - 9696:9696
     restart: unless-stopped
